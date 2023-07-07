@@ -1,0 +1,69 @@
+:root {
+    --clr-ne-tittle: 220, 24%, 22%;
+    --clr-ne-border: 0, 0%, 100%;
+    --clr-ne-p: 222, 6%, 65%;
+    --clr-ne-background: 212, 45%, 89%;
+
+    --fs-p: 15px;
+    --ff: 'Outfit', sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    font-display: swap;
+    src: local('Outfit'),
+        url('fonts/Outfit-VariableFont_wght.ttf')
+        format('ttf');
+    font-weight: 100 900;
+}
+
+.grid-flow {
+    display: grid;
+    place-items: center;
+}
+
+body {
+    font-family: var(--ff);
+    font-size: var(--fs-p);
+    font-weight: var(--fw-regular);
+    background-color: hsla(var(--clr-ne-background));
+}
+
+.card {
+    box-sizing: border-box;
+    grid-template-rows: 60%;
+    width: min(320px, 85%);
+    height: min(500px, 85%);
+    padding: 1rem;
+    background-color: hsla(var(--clr-ne-border));
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 0 hsla(var(--clr-ne-tittle), .2);
+}
+
+.attribution {
+    position: absolute;
+    top: 0;
+}
+
+.qr {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.description {
+    height: 80%;
+    padding: .25rem;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.tittle {
+    font-size: 1.25rem;
+    font-weight: var(--fw-bold);
+}
+
+.info { opacity: .65; }
